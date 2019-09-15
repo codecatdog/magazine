@@ -1,0 +1,13 @@
+<t-nav class="nav" catch:nav="onNav"/>
+<t-recommend recommend="{{recommend}}" magazine-id="{{magazineId}}" class="recommend"/>
+
+<t-tagList mark-list="{{markList}}">
+  <t-add slot="before" class="add" wx:if="{{magazineId == 0}}"/>
+  <view slot="after" class='to-catelog' catch:tap="onCatelog"  wx:if="{{magazineId == 0}}">...</view>
+</t-tagList>
+<t-articleList article-list="{{articleList}}"
+                more="{{getMore}}"
+                magazine-id="{{magazineId}}"/>
+<view class='loading-container' wx:if="{{loading}}">
+  <t-loading class="loading"/>
+</view>

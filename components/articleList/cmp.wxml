@@ -1,0 +1,11 @@
+<view class='container'>
+<!-- <t-loading/> -->
+  <t-article  class="article"
+            wx:for="{{articleList}}"
+            wx:key="{{artId}}"
+            article-detail="{{item}}"/>
+   <!-- 自定义组件中 hidden会被当做一个属性 会将属性值传给子组件 -->
+  <t-loading hidden="{{!loading}}"/>
+  <text   wx:if="{{noMoreData}}"
+          class='no-more'>没有更多了</text>
+</view>

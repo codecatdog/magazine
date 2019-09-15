@@ -1,0 +1,18 @@
+.container {
+  
+  background-color: rgba(0, 0, 0, .1);
+  padding: 25rpx;
+}
+.article {
+  /*自定义组件需要一个display：block；样式才会生效*/
+  display: block;
+  margin-top: 30rpx;
+}
+
+.no-more {
+  display: block;
+  color: #666;
+  text-align: center;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+}

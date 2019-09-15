@@ -1,0 +1,29 @@
+<view class='cata-container'>
+  <t-search value="{{searchWord}}"/>
+
+
+  <view class='mark-container'>
+
+    <view class='mark-control'>
+      <view class='my-magazine'>我的杂志</view>
+      <view class='manage'>管理杂志</view>
+    </view>
+
+    <t-tagList mark-list="{{myTagList}}"> 
+      <t-add slot="before" style="margin-right: 20rpx;"/>
+    </t-tagList>
+  </view>
+
+  <view>
+    <view wx:for="{{tagInfoList}}"wx:for-item="tagListItem" wx:key="index">
+      <view class='tagTitle'>{{tagListItem.title}} ></view>
+      <view>
+        <view class='listItem' wx:for="{{tagListItem.tagList}}" wx:key="index">
+          <text class='tag'># {{item.tag}}</text>
+          <t-subscribe tag="{{item.tag}}" tag-id="{{item.tagId}}"catch:tap="onSubscribeTap"/>
+        </view>
+      </view>
+    </view>
+   
+  </view>
+</view>

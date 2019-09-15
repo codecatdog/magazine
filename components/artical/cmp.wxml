@@ -1,0 +1,40 @@
+<view class='container'>
+  <view class='mark-container'>
+    <image class='avatar' src="{{articleDetail.mark.avatar}}"></image>
+    <text class='text'>{{articleDetail.mark.people}}等{{articleDetail.mark.count}}人mark了</text>
+  </view>
+  <view>
+    <t-bigImg wx:if="{{articleDetail.type === 0}}"
+      main-title="{{articleDetail.mainTitle}}"
+      img-src="{{articleDetail.imgArray[0]}}" />
+
+    <t-nineImg wx:elif="{{articleDetail.type === 1}}" 
+      img-arr="{{articleDetail.imgArray}}"
+      main-title="{{articleDetail.mainTitle}}" />
+
+    <t-imgText wx:elif="{{articleDetail.type === 2}}"
+       main-title="{{articleDetail.mainTitle}}" 
+       sub-head="{{articleDetail.subHead}}" 
+       img-src="{{articleDetail.imgArray[0]}}" />
+
+    <t-video wx:elif="{{articleDetail.type === 3}}" 
+      src='{{articleDetail.video.src}}' 
+      poster='{{articleDetail.video.poster}}' 
+      duration='{{articleDetail.video.duration}}' 
+      main-title='{{articleDetail.mainTitle}}' 
+      video-id='{{articleDetail.video.id}}' />
+
+    <t-pureText wx:else 
+      main-title="{{articleDetail.mainTitle}}" 
+      sub-head="{{articleDetail.subHead}}" />
+  </view>
+  <view class='control-container'>
+    <view>
+      <t-tag tag="{{articleDetail.tag}}" tag-id="{{articleDetail.tagId}}"/>
+    </view>
+    <view class='control-box'>
+      <t-more tag="{{articleDetail.tag}}" class="box"/>
+      <t-mark like="{{likeStatus}}" class="box" bindlike="onLike"/>
+    </view>
+  </view>
+</view>

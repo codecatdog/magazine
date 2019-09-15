@@ -1,0 +1,24 @@
+<!--components/video/cmp.wxml-->
+<view class='container'>
+  <view>
+    <video id='{{videoId}}' src="{{src}}" class='video' hidden='{{showPoster}}' bindended='onVideoEnd' />
+    <view hidden='{{!showPoster}}' class='poster-container'>
+      <image class='poster' src='{{poster}}' />
+      <!-- 控制区域 -->
+      <!-- bind不阻止冒泡，原生组件中只能用bindtap,其他都不支持 -->
+      <view class='controler' catch:tap="onPlay">
+        <image class='play-btn' src='./image/play.png' />
+        <text class='duration'>{{duration}}</text>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='main-title'>
+    <text>{{mainTitle}}</text>
+  </view>
+
+  <view class='mask' hidden='{{showPoster}}' catch:tap='onMaskTap'>
+
+  </view>
+</view>

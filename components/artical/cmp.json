@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-bigImg": "/components/bigImg/cmp",
+    "t-pureText": "/components/pureText/cmp",
+    "t-imgText": "/components/imgText/cmp",
+    "t-nineImg": "/components/nineImg/cmp",
+    "t-video": "/components/video/cmp",
+    "t-tag": "/components/tag/cmp",
+    "t-more": "/components/more/cmp",
+    "t-mark": "/components/mark/cmp"
+  }
+}

@@ -1,0 +1,22 @@
+/* pages/catalog/catalog.wxss */
+.mark-control {
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx;
+}
+.manage {
+  font-size: 32rpx;
+}
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 25rpx 20rpx;
+}
+.tagTitle {
+  margin-top: 40rpx;
+  margin-left: 20rpx;
+}
+.tag {
+  font-size: 30rpx;
+
+}

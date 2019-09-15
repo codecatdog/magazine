@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "t-articleList": "/components/articleList/cmp",
+    "t-nav": "/components/nav/cmp",
+    "t-recommend": "/components/recommend/cmp",
+    "t-tagList": "/components/tagList/cmp",
+    "t-add": "/components/add/cmp",
+    "t-loading": "/components/loading/cmp"
+  }
+}
